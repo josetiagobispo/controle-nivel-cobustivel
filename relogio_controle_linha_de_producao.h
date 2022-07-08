@@ -1,4 +1,5 @@
 # by josetiagobsouza@gmail.com
+# Roda no ESP32
 #include <Keypad.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
@@ -23,7 +24,7 @@
 #define Password_Length 8
 char *Dispositivo[] = { " DKH5-54H6-LHRF " };
 
-/*configuraÁıes do menu*/
+/*configura√ß√µes do menu*/
 
 int ponteiroMenu = 0;
 int ponteiroSubMenu = 0;
@@ -72,7 +73,7 @@ byte PinoLinha[Linhas] = { d1, d2, d3, d4 }; //linhas do teclado detalhe preto
 byte PinoColuna[Colunas] = { d5, d6, d7, d8 }; //colunas do teclado detalhe branco
 Keypad Teclado = Keypad(makeKeymap(hexaKeys), PinoLinha, PinoColuna, Linhas,
 		Colunas);
-/*FIM DO C”DIGO TECLADO DE MEMBRADA*/
+/*FIM DO C√ìDIGO TECLADO DE MEMBRADA*/
 
 /*TECLADO*/
 //#define COUNTDOWN_TIME 12000 //4hour esta em milisegundos
@@ -96,7 +97,7 @@ Imagens img;
 
 void setup() {
 	Serial.begin(115200);
-	pinMode(pinoBuzzer, OUTPUT); //DEFINE O PINO COMO SAÕDA
+	pinMode(pinoBuzzer, OUTPUT); //DEFINE O PINO COMO SA√çDA
 	lcd.init();
 	lcd.backlight();
 	pinMode(signalPin, OUTPUT);
